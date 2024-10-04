@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" href="ham.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!-- Load Inter Font -->
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+
+    /* Main styles */
+    body {
+      font-family: 'Inter', sans-serif; /* Use Inter font */
+      background-color: #4a70e2;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 1000px;
+      flex-direction: column;
+      text-align: center;
+      overflow-x: hidden; /* Hide horizontal overflow */
+    }
+
+    /* Greeting text with blinking cursor */
+    .header {
+      font-size: 200px; /* Increased size to 200px */
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 200px; /* Set height equal to the font size to avoid shifting */
+    }
+
+    /* Subtext style */
+    .subtext {
+      font-size: 24px; /* Smaller size */
+      margin-top: 20px;
+      font-weight: bold; /* Make Hamdan Afridi text bold */
+      color: white; /* Set text color to white */
+      font-family: 'Cursive'; /* Set the font to cursive for the description */
+      font-style: italic; /* Add italic style for a cursive effect */
+    }
+
+    /* Center content vertically */
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px; /* Add padding for spacing */
+      width: 100%; /* Ensure full width */
+      max-width: 800px; /* Limit maximum width */
+      margin: auto; /* Center content horizontally */
+    }
+
+    /* Typewriter effect with blinking cursor */
+    .typewriter {
+      display: inline-block;
+      overflow: hidden; /* Prevent overflow */
+      white-space: nowrap;
+      border-right: 2px solid white; /* Thinner cursor */
+      animation: blink 0.7s steps(1) infinite;
+      max-width: 90ch; /* Limit the width to a maximum of 90 characters */
+    }
+
+    @keyframes blink {
+      from { border-right: 2px solid white; }
+      to { border-right: 2px solid transparent; }
+    }
+
+    /* Navbar */
+    .navbar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #d1fa44;
+    }
+
+    /* Contact Button */
+    .contact-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #d1fa44;
+      color: black;
+      border-radius: 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 1; /* Ensure contact button is above other content */
+    }
+
+    .contact-button:hover {
+      background-color: #c2e639;
+      transform: scale(1.1); /* Enlarge the button on hover */
+    }
+
+    /* Emoji rotation effect */
+    .contact-button:hover .emoji {
+      display: inline-block;
+      transition: transform 0.6s ease;
+      transform: rotate(360deg); /* Rotate emoji on hover */
+    }
+
+    /* Arrow Button Styling */
+    .arrow-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .arrow-button {
+      width: 24px;
+      height: 24px;
+      border: solid #d1fa44;
+      border-width: 0 4px 4px 0;
+      display: inline-block;
+      padding: 10px;
+      transform: rotate(45deg);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow-button:hover {
+      transform: rotate(45deg) translateY(4px);
+    }
+
+    /* Decorative Shapes */
+    .shape {
+      position: absolute;
+      opacity: 0.6;
+    }
+
+    .shape.circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #d1fa44;
+    }
+
+    .shape.diamond {
+      width: 20px;
+      height: 20px;
+      background-color: #00C2FF;
+      transform: rotate(45deg);
+    }
+
+    .shape.flower {
+      width: 40px;
+      height: 40px;
+      background-color: #ff69b4;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .circle-1 { top: 10%; left: 20%; }
+    .circle-2 { top: 80%; left: 70%; }
+    .diamond-1 { top: 30%; right: 20%; }
+    .diamond-2 { top: 60%; left: 15%; }
+    .flower-1 { bottom: 20%; left: 30%; }
+    .flower-2 { top: 50%; right: 10%; }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 800px;
+      margin-top: 200px;
+    }
+
+    .services-column {
+      flex: 1;
+      padding: 20px; /* Adjust spacing inside columns */
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease; /* Add transition for hover effect */
+      border-radius: 10px; /* Rounded corners */
+      cursor: pointer; /* Cursor pointer on hover */
+      background-color: black; /* Black background for boxes */
+      margin: 0 10px; /* Margin between boxes */
+    }
+
+    .services-column:hover {
+      transform: scale(1.1); /* Enlarge on hover */
+    }
+
+    .services-column h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: white; /* White color for heading */
+    }
+
+    .service-item {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: white; /* White color for service items */
+    }
+        
+    /* Footer styles */
+    .footer {
+      position: relative;
+      padding-top: 400px;
+      padding: 20px;
+      background-color: #4a70e2;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .footer h3 {
+      animation: move 10s linear infinite; /* Infinite sideways movement */
+      display: inline-block; /* Inline block for animation */
+    }
+
+    @keyframes move {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="porto.html">Home</a>
+    <a href="#skill">Projects</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- Centered content -->
+  <div class="content">
+    <div class="header">
+      <div id="greeting" class="typewriter"></div>
+    </div>
+
+    <div class="subtext">I'm Hamdan Afridi <br> Graphic Designer & Front End Developer.</div>
+
+    <!-- Arrow Button -->
+    <div class="arrow-container">
+      <a href="#skill"><div class="arrow-button"></div></a>
+    </div>
+
+    <!-- Services and Projects Sections -->
+    <div class="services" id="skill">
+      <div class="services-column" >
+        <h2>Projects</h2>
+        <div class="service-item">Web Designs</div>
+        <div class="service-item">Logo Designing</div>
+        <div class="service-item">Company Website</div>
+        <div class="service-item">Kahoot Bomber</div>
+      </div>
+      <div class="services-column">
+        <h2>Education</h2>
+        <div class="service-item">BAKIS</div>
+        <div class="service-item">SPS</div>
+        <div class="service-item">GEMS WSS</div>
+        <div class="service-item">BIS</div>
+      </div>
+      <div class="services-column">
+        <h2>Skills</h2>
+        <div class="service-item">Graphic Design</div>
+        <div class="service-item">Web Development</div>
+        <div class="service-item">UI/UX Design</div>
+        <div class="service-item">HTML5/CSS</div>
+        <div class="service-item">Python & JS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Button -->
+  <button class="contact-button">Contact me <span class="emoji">😊</span></button>
+
+  <!-- Decorative Shapes -->
+  <div class="shape circle circle-1"></div>
+  <div class="shape circle circle-2"></div>
+  <div class="shape diamond diamond-1"></div>
+  <div class="shape diamond diamond-2"></div>
+  <div class="shape flower flower-1"></div>
+  <div class="shape flower flower-2"></div>
+    <!-- Footer -->
+      <footer class="footer">
+        <h3>Let's Work Together.</h3>
+        <p>© 2024 Hamdan Afridi. All rights reserved.</p> <!-- Replace with your email -->
+      </footer>
+
+
+  <!-- JavaScript for Typewriter Effect -->
+  <script>
+    const greetingElement = document.getElementById("greeting");
+    const greetings = ["Hello!", "Ciao!", "Hola!", "Selam!", "مرحبًا!", "Namaste!"];
+    let index = 0; // Start at the first greeting
+    let isDeleting = false; // To track if we are deleting characters
+    let charIndex = 0; // Current character index in the greeting
+
+    function typeWriter() {
+        let currentText = greetings[index];
+
+        // Update the charIndex based on whether we are deleting or adding text
+        if (isDeleting) {
+            charIndex -= 1; // Remove a character
+        } else {
+            charIndex += 1; // Add a character
+        }
+
+        // Prevent charIndex from going below 0
+        if (charIndex < 0) {
+            isDeleting = false; // Switch to adding text
+            index = (index + 1) % greetings.length; // Move to the next greeting
+            charIndex = 0; // Reset charIndex for the new greeting
+        }
+
+        // Prevent charIndex from going past the length of the string
+        if (charIndex > currentText.length) {
+            charIndex = currentText.length; // Stop at the end of the current greeting
+            isDeleting = true; // Start deleting after displaying the full greeting
+        }
+
+        greetingElement.textContent = currentText.substring(0, charIndex); // Update displayed text
+
+        // Adjust cursor width based on text length
+        greetingElement.style.width = (charIndex + 1) + 'ch'; // Include cursor position
+
+        // Control timing for adding and deleting text
+        let typingSpeed = isDeleting ? 100 : 200; // Faster when deleting
+        if (!isDeleting && charIndex === currentText.length) {
+            setTimeout(() => (isDeleting = true), 1000); // Pause at the end of typing
+        }
+
+        setTimeout(typeWriter, typingSpeed);
+    }
+
+    // Set an initial value and start the typewriter effect
+    greetingElement.textContent = "";
+    typeWriter();
+  </script>
+
+</body>
+</html>
