@@ -1,0 +1,181 @@
+html,body {
+    padding: 0;
+    margin: 0;
+    font-family: 'General Sans', sans-serif;
+    scroll-behavior: smooth;
+    height: 100%; /* Ensure it covers the entire viewport */
+}
+
+h1{
+    font-family: "Concert One", sans-serif;
+}
+.card {
+    margin: 50px auto;
+    width: 300px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 100px; /* Adjust width as needed */
+    border-radius: 50%; /* Circular image */
+    margin: 10px 0;
+}
+
+.card-body {
+    text-align: center;
+}
+h1{
+  margin-top: 200px;
+}
+
+h2.coding {
+    margin: 10px 0;
+    font-weight: bold;
+    font-family: "Varela Round", sans-serif;
+}
+
+h4 {
+    margin: 5px 0;
+    color: #6c757d; /* Light gray color */
+}
+
+p {
+    font-style: italic;
+    color: #343a40; /* Dark gray color */
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    position: absolute; /* Fix positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Align to center */
+    width: 50px; /* Set a fixed width for buttons */
+    height: 50px; /* Set a fixed height for buttons */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: background color */
+    border-radius: 50%; /* Optional: round buttons */
+    z-index: 1; /* Ensure buttons are above other elements */
+}
+
+/* Prevent any default margin/padding behavior */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* Make background transparent */
+    /* You can customize the icons here */
+}
+
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid black; /* Keep the cursor in black for contrast */
+    animation: blink 0.7s steps(1) infinite;
+    max-width: 90ch;
+}
+      /* Make carousel control icons black */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1); /* This inverts the color, making the icon black */
+      }
+
+      /* Add padding to the carousel items for spacing */
+      .carousel-item {
+        padding: 20px;
+      }
+
+      /* Ensure the carousel controls are fixed and won't move */
+
+@keyframes blink {
+    from { border-right: 2px solid black; }
+    to { border-right: 2px solid transparent; }
+}
+.memoji-container {
+    width: 80px; /* Set a fixed size for the memoji */
+    height: 80px;
+    margin: 0 auto; /* Center the image */
+  }
+        .marquee {
+            margin-bottom: 100px;
+            overflow: hidden; /* Hide the overflow */
+            white-space: nowrap; /* Prevent wrapping */
+            width: 100%; /* Full width */
+            height: 80px; /* Adjust height to fit images */
+            display: flex;
+            align-items: center; /* Center items vertically */
+            margin-top: 50px; /* Space above the marquee */
+        }
+
+        .marquee-content {
+            display: inline-block; /* Inline block to allow horizontal scrolling */
+            padding-left: 100%; /* Start padding */
+            animation: scroll 15s linear infinite; /* Animation for scrolling */
+        }
+
+        .language-icon {
+            height: 60px; /* Set a height for the images */
+            margin: 0 20px; /* Spacing between images */
+        }
+
+        /* Animation keyframes */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0); /* Start position */
+            }
+            100% {
+                transform: translateX(-100%); /* End position */
+            }
+        }
+  .memoji-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+  }
+  footer {
+    background-color: #D8CBC7;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    bottom: 0;
+    left: 0;
+}
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+nav{
+    border-bottom: 1px solid black; /* Black line under navbar */
+
+}
+.header {
+    font-size: 200px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding: 0; /* Removed padding */
+    margin-top: 10px; /* Added small margin to reduce space */
+    text-align: center; /* Center the text */
+    height: calc(100vh - 60px); /* Adjust height to fit perfectly under the navbar */
+}
+#contact{
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+#contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+#contact:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Bootstrap outline color */
+}
+a{
+    font-family: 'General Sans', sans-serif;
+}
