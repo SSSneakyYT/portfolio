@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hamdan - Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!-- Bootstrap Icons CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #B6C8A9;
+            font-family: 'Varela Round', sans-serif;
+            margin: 0;
+        }
+
+        /* Project section styling */
+        .projects-section {
+            padding: 50px 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 0 50px;
+        }
+
+        div.project-card {
+            padding: 30px;
+            background-color: #D8E6D0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Alternating card background colors */
+        .project-card:nth-child(odd) {
+            background-color: #D8E6D0;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+            font-family: 'Concert One', cursive;
+            color: #5C5346;
+        }
+
+        .project-description {
+            margin: 20px 0;
+            color: #5C5346;
+            font-size: 1.1em;
+        }
+        nav { /* Ensure the navbar has the same background color */
+    border-bottom: 1px solid black; /* Black line under navbar */
+    font-family: 'General Sans', sans-serif;
+
+}
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .tech-list li {
+            color: #5C5346;
+            font-size: 1.2em;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #D8CBC7;
+        }
+
+        footer a {
+            color: #5C5346;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #B6C8A9;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">hamdan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/hamdan.afridii/">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h2 class="text-center mb-4">My Projects</h2>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Security Awareness Campaign</h3>
+                <p class="project-description">A website designed to educate users about common cybersecurity threats.</p>
+                <ul class="tech-list">
+                    <li><i class="bi bi-code"></i> HTML</li>
+                    <li><i class="bi bi-palette"></i> CSS</li>
+                    <li><i class="bi bi-lightning"></i> JavaScript</li>
+                </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p class="project-description">A personal portfolio showcasing my skills, projects, and background with modern UI.</p>
+                <ul class="tech-list">
+                    <li><i class="bi bi-code"></i> HTML</li>
+                    <li><i class="bi bi-palette"></i> CSS</li>
+                    <li><i class="bi bi-bootstrap"></i> Bootstrap</li>
+                </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>Interactive Chatbot</h3>
+                <p class="project-description">A chatbot that uses AI for interaction, integrating Python and HTML to assist users.</p>
+                <ul class="tech-list">
+                    <li><i class="bi bi-code"></i> Python</li>
+                    <li><i class="bi bi-terminal"></i> API Integration</li>
+                </ul>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <h3>Weather Forecasting App</h3>
+                <p class="project-description">A web app that provides real-time weather forecasts by integrating the Weatherstack API.</p>
+                <ul class="tech-list">
+                    <li><i class="bi bi-cloud"></i> Weatherstack API</li>
+                    <li><i class="bi bi-code"></i> HTML/CSS</li>
+                    <li><i class="bi bi-gear"></i> JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #B6C8A9;">
+        <p>&copy; 2024 Hamdan Afridi | All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="projects.html">Projects</a> | 
+            <a href="https://www.instagram.com/hamdan.afridii/">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Hamdan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!-- Bootstrap Icons CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+        /* General styling */
+        body {
+            background-color: #B6C8A9; /* Background matching your primary color */
+            font-family: 'Varela Round', sans-serif;
+            color: #333; /* Darker text for contrast */
+            text-align: center; /* Center align all text */
+            margin: 0;
+        }
+
+        /* Container and section styling */
+        .section {
+            margin: 50px auto; /* Center align sections with margin */
+            padding: 40px;
+            background-color: #D8E6D0; /* A soft off-white for section backgrounds */
+            border-radius: 10px;
+            width: 80%; /* Make it a bit more narrow for centered content */
+            max-width: 800px; /* Cap the max width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform */
+        }
+
+        /* Add hover effect with scaling */
+        .section:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+            transform: scale(1.05); /* Scale up slightly */
+        }
+
+        /* Titles */
+        h2 {
+            font-family: 'Concert One', cursive;
+            color: #5C5346; /* A darker brown to complement the soft tones */
+            margin-bottom: 30px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #D8CBC7;
+        }
+
+        footer a {
+            color: #5C5346;
+            text-decoration: none;
+        }
+        nav { /* Ensure the navbar has the same background color */
+    border-bottom: 1px solid black; /* Black line under navbar */
+    font-family: 'General Sans', sans-serif;
+
+}
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills list styling */
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            color: #5C5346;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Link hover styles */
+        a {
+            color: #5C5346;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #333; /* Slightly darker on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #B6C8A9;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">hamdan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/hamdan.afridii/">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="section">
+        <h2>About Me</h2>
+        <p>Hi, I'm Hamdan, a passionate student exploring the world of cybersecurity and programming. I enjoy learning new technologies and solving challenging problems through code. My interest in web development has driven me to build websites that are not only functional but also user-friendly and aesthetically pleasing.</p>
+        <p>Currently, I am working on a security awareness campaign project and various other initiatives that help people understand cybersecurity risks.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><i class="bi bi-code-slash"></i> Web Development: HTML, CSS, JavaScript</li>
+            <li><i class="bi bi-lock"></i> Cybersecurity: Phishing, Social Engineering Awareness</li>
+            <li><i class="bi bi-gear"></i> Python Programming</li>
+            <li><i class="bi bi-server"></i> API Integration (Weatherstack, etc.)</li>
+            <li><i class="bi bi-terminal"></i> Command Line, Git, and Version Control</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li>Security Awareness Campaign - A website to educate users on cybersecurity threats.</li>
+            <li>Portfolio Website - Showcasing my skills, projects, and background in programming.</li>
+            <li>Interactive Chatbot - Integrating AI using Python and HTML to create a dynamic chatbot experience.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+        <p><i class="bi bi-envelope"></i> Email: <a href="mailto:afridi.hamdan04@gmail.com">afridi.hamdan04@gmail.com</a></p>
+    </section>
+
+    <!-- Footer -->
+     <hr>
+    <footer style="background-color: #B6C8A9;">
+        <p>&copy; 2024 Hamdan Afridi | All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="projects.html">Projects</a> | 
+            <a href="https://www.instagram.com/hamdan.afridii/">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
